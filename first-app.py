@@ -4,19 +4,26 @@ print("\nTO START ENTER AN OPTION VALUE OR 9 FOR MENU OPTIONS\n")
 class app:
     def __init__(self, val):
         self.val = val
-        if self.val == 1:
-            print("IN THIS SECTION YOU HAVE THA ABILITY TO ADD TWO VALUES\n")
+        if self.val == "1":
+            print("IN THIS SECTION YOU HAVE THE ABILITY TO ADD TWO VALUES\n")
             def add(a,b):
                 sum = a+b
-                print(sum,"\n")
-                return app(int(input("ENTER NEW MENU OPTION OR 0 for HELP: "))) 
-            print(add(a=int(input("FIRST VALUE: \n")), b=int(input("SECOND VALUE: \n"))))
-        if self.val==9:
+                print(f"\n = {sum}\n")
+                return app(input("ENTER NEW MENU OPTION OR 9 for HELP: ")) 
+            print(add(a=int(input("\nFIRST VALUE: ")), b=int(input("\nSECOND VALUE: "))))
+        if self.val=="9":
             print("""THESE ARE THE OPTION THAT ARE MEANT FOR THE MENU:
             1 - ADDING TWO VALUES
             9 - HELP
             0 - EXIT""")
-            return app(int(input("ENTER MENU OPTION: ")))
-        if self.val==0:
-            return print("thanks") 
-user=app(val=int(input()))
+            return app(input("ENTER MENU OPTION: "))
+        if self.val=="0":
+            print("\nGOODBYE\n")
+            return None
+        #if self.val!=int:
+         #   print("\nTHE VALUE MUST BE A NUMBER, FOR HELP 9")
+          #  return app(input("ENTER MENU OPTION: "))
+        else:
+            print("\nENTER A PROPER OPTION OR 9 FOR MENU OPTIONS\n")
+            return app(input("ENTER MENU OPTION: "))
+user=app(val=input())
