@@ -20,3 +20,6 @@ class app:
         if self.val==0:
             return print("thanks") 
 user=app(val=int(input()))
+
+#this is for testing ubuntu git connections
+
