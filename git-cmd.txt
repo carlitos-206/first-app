@@ -1,0 +1,65 @@
+Git Commands
+
+------This is to Clone and Initiate a Repo----
+Start Git
+
+>> git init
+
+Clone into a Repo
+
+>> git clone '{repo url}'
+
+Clone into a branch
+
+>> git clone --branch '{branch name}' '{repo}
+
+Create branch
+    Only if inside repo
+>> git checkout -b '{new_branch}'
+
+Switch Branch 
+    Only if inside repo
+>> git checkout '{existing_branch_name}'
+----------------------------------------------------
+
+
+-------Push to repo{branch} from machine---------------------
+First navigate to the top level of the repo 
+    How to check where you at? 
+            
+            >>pwd 
+        and/or 
+            >>ls
+Make sure Git has been started:
+>>git init
+
+Now Add all your files
+>> git add .
+
+Now create a commit 
+>> commit -m 'your message'
+
+Now Push to branch
+>> git push 'remote_name' 'branch_name'
+---------------------------------------------------------------
+
+-----------How to merge into main---------------------
+First navigate to the top level of the repo 
+    How to check where you at? 
+            
+            >>pwd 
+        and/or 
+            >>ls
+Make sure Git has been started:
+>>git init
+
+Switch to branch to want to merge
+    example if you want to update the main with a branch Switch into 'main'
+
+>>git checkout 'main'
+
+Now merge branch
+>> git merge 'branch_name'
+
+    this will update the main branch with the files provided from the 'branch_name'
+----------------------------------------------------------
